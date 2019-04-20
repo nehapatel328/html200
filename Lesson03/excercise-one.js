@@ -8,3 +8,6 @@ console.log(brunchFood);
 
 brunchFood.splice(3, 1);
 console.log(brunchFood);
+
+let str= brunchFood.join(',');
+console.log(brunchFood);
