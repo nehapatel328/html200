@@ -16,7 +16,7 @@ powerOf(x);
 
 console.log(x);
 
-//32 because X starts off as two, then 2 is passed to doubler which returns 4. Now, 4 is passed to powerOf and then that same 4 is passed to double, which returns 8. The value to the right of the * sign is still 4 and thus, 8 times 4 is 32
+//32 because X starts off as two, then 2 is passed to doubler, which returns 4. Now, 4 is passed to powerOf and then that same 4 is passed to double, which returns 8. The value to the right of the * sign is still 4 and thus, 8 times 4 is 32
 
 
 /*Two built in JavaScript functions that we can use: Prompt and Alert. These are standard.
