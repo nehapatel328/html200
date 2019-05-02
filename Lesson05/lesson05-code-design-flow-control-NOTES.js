@@ -122,4 +122,77 @@ try {
   console.log('Program finished');
 }
 
-//only use when you think an error might occur. 
+//only use when you think an error might occur.
+
+
+//OBJECTS
+//functions are objects. used as a way to better stxr and org the primitives we've been using
+//objects are containers used for strings, booleans, and other objects.
+
+const = dog {}; //empty object so add some values, which can then be added and stored in the object as key value pairs.
+
+const dog = {
+  name: 'Fido'
+};//key is name; and the valude is 'Fido' (the string/primitive). So now our object has one value that can be obtained by referencing it by key. To access this value, we can use two diff methods: DOT NOTATION that's the most common;OR BRACKET NOTATION
+
+const dog = {
+  name: 'Fido'
+};
+console.log(dog.name); //DOT notation inside (). It's the variable name followed by dot and then the key name in order to obtain the value.
+
+//SECOND is BRACKET NOTATION
+//more useful if we're accessing the key using a variable
+const dog = {
+  name: 'Fido'
+};
+console.log(dog['name']); //string name into the bracket
+//Fido
+
+//NOW let's store key into a variable
+
+const dog = {
+  name: 'Fido'
+};
+
+const key = 'name';
+console.log(dog.name);
+//Fido
+
+//we can store additional values into this object as long as the key value pairs are comma separated.
+
+const dog = {
+  name: 'Fido',
+  age: 4,
+  speak: function('Woof!');
+};
+dog.speak();
+//Woof!
+
+//If we need to access a value by key inside this object, such as inside the function we created, I want to print out this name, we can use a ref to the object itself. The keyword "this" will refer to the object that we need to use inside a function.  For ex, we can access the dog's name insdie of this fxn by using this.name
+const dog = {
+  name: 'Fido',
+  age: 4,
+  speak: function();
+    console.log(this.name); // will only work inside this fxn inside this object
+};
+dog.speak();
+
+//Fido
+
+//can use objects to store other objects. Let's add owner's first and last name to this object.
+
+const dog = {
+  name: 'Fido',
+  age: 4,
+  speak: function();
+    console.log(this.name);
+  },
+  owner: {
+    firstName: 'Mary',
+    lastName: 'Smith'
+  }
+};
+
+dog.speak();
+
+//objects are essential building blocks of javascript programs. They provide a container to not only organize but also encapsualate data into independent, modular unit. Whenever you start working with pieces of data that are tightly related to one another, think about putting that data into an object. 
