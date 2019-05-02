@@ -97,4 +97,29 @@ function getSheddingAmount(breed {
 console.log (
   getSheddingAmount(myDogBreed)
 );
-//switch statements is good when dealing with 3 to 4 blocks or MORE. if/else better for 1 or 2. 
+//switch statements is good when dealing with 3 to 4 blocks or MORE. if/else better for 1 or 2.
+
+//ERROR HANDLING WITH TRY-CATCH-FINALLY blocks
+//try is the rope and catch is the net.
+
+const dogToParse = '{"dog": "Husky", "name": "Dubs}'; //missing a double quote so'll you'll get an error
+
+const parsedDog = JSON.parse(dogToParse);
+
+console.log(dog.name);
+console.log('Program finished');
+
+//SOO USE A TRY/CATCH BLOCK
+
+try {
+  const dogToParse = '{"dog": "Husky", "name": "Dubs}'; //missing a double quote so'll you'll get an error
+  const parsedDog = JSON.parse(dogToParse);
+  console.log(dog.name);
+} catch(error) {
+  console.log('invalid dog object');
+  throw error; //ensures that error shows up in console
+} finally { //cleanup code to run regardless if an error is run. add a finally block to try/catch. finally is great for a block where cleanup needs to occur, such as closing a file or alerting the user of what happened.
+  console.log('Program finished');
+}
+
+//only use when you think an error might occur. 
