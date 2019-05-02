@@ -48,3 +48,53 @@ const puppy = dogAgeInHumanyear <= 2 ? true : false;
 console.log(puppy);
 
 //ternary statements tend to clearer when dealing with small, one line conditional statements
+
+//SWITCH Statements
+//good for single values against multiple and diff cases
+
+//this code takes a variable (dog breed) and compares it to a few diff strings. depending on if the boolean expression returns true...we'll print out a diff message.
+const myDogBreed = 'labradoodle';
+
+function getSheddingAmount(breed {
+  if (breed === 'golden retriever') {
+    return 'lots of shedding';
+  } else if (breed === 'labradoodle') {
+    return 'minmial shedding';
+  } else if (breed === 'portuguese water dog') {
+    return 'no shedding';
+  } else {
+    return 'not found';
+  }
+}
+
+console.log (
+  getSheddingAmount(myDogBreed)
+); //white this works, it would be tedious to add more statements, like 10 or 20. SOO A SWTICH STATEMENT IS USED INSTEAD
+
+//SWITCH STATEMENTS
+//has a switch keyword and then a value in (); the value in () is then compared to one or more cases defined in the block of the switch statement. each case is defined by usng case keyword, followed by the value that we wanne compare agaisnt. each case blcok run a set of statements and end with the BREAK keyword in order to end the block. if none of cases match, we can run a default case.
+
+const myDogBreed = 'labradoodle';
+
+function getSheddingAmount(breed {
+  switch (breed) {
+    case 'beagle': // fall through case. will run with golden retriever. use break if you wanna run separate
+    case 'golden retriever': {
+      return 'lots of shedding';
+      break; //ends the block
+    }
+
+    case 'portuguese water dog': {
+      return 'no shedding';
+      break;
+    }
+    default: { //will run if there's no match
+      return 'not found';
+    }
+
+  }
+}
+console.log (
+  getSheddingAmount(myDogBreed)
+);
+//switch statements is good when dealing with 3 to 4 blocks or MORE. if/else better for 1 or 2. 
