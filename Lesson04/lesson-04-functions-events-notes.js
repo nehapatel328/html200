@@ -1,4 +1,119 @@
+//functiona allow users to run blocks of codes. use Functiond declartion function functionName() {} no semicolons needed after functions. Good for running code over and over again. Need to define fxn and then CALL it. Anymous functions do exist.
+
+//Simple adder function
+
+let x = 24;
+let y = 12;
+let result = 0;
+
+function adder () {
+  result = x + y;
+}
+
+adder ();
+console.log(result);
+//omitting the fxn would release a result of zero.
+
+//arguments let the function know that some values are being passed to it. The parameters are the values we send to the function when we call it.
+
+//STRUCTURE
+function functionName(arguments) {
+  //code here
+}
+ //let function know that arguments are being passed to it
+
+ functionName(parameters);
+ //values that we sent to the function when we call it
+
+ //SAME ADDER
+
+ const x = 25;
+ const y = 3;
+ let result = 0;
+
+ function muliplier(firstNumber, secondNumber){
+   result = firstNumber * secondNumber; //changing the reference to the variable for the use inside of the function, so 25 is x and y is 3 and once you're inside the fxn, these numbers a \re mapped to the numbers that we call in the parameters.
+ }
+
+ multiplier(x,y);
+ console.log(result);
+ //75 -- so how it's working is that it's 3 times 25, which is 75.
+
+ //SCOPE
+ //so any variable declared in a function block won't be available outside of it. It has to be declared outside of the function to be available for use outside.
+
+ //SIMPLE ADDER
+
+ let result = 0;
+
+ function adder(x, y) {
+   result = x + y;
+ }
+
+ adder (42, 19);
+ console.log(result);
+
+ //function always return something
+
+ //function can CALL functions
+ let area;
+
+ function volumeCalculator(length, width, height) {
+   volume = length *height * width;
+   return volume;
+ }
+ console.log(volumeCalculator(2,8,2));
+
+ //function to calculate the distance a car runs during a race
+
+ const lapLength = 5;
+ const laps = 23;
+
+ function raceLength(x, y) {
+   return x * y; //what happens when the function is called
+ }
+
+ console.log (raceLength(lapLength, laps));
+//115 This works because we're returning a value
+
+//IF we declared a variable and then updated it inside the function,
+const lapLength = 5;
+const laps = 23;
+let raceLength = 0; //VARIABLE added
+
+function raceLength(x, y) {
+  raceLength = x * y; //what happens when the function is called
+}
+
+console.log (raceLength(lapLength, laps));
+
+//Nothing hapens because raceLength inside fxn isn't returning anything
+
 //functions; they use all three, the PARAMETERS are values passed into the function, a RETURN ‘returns’ a result of code, and the CURLY BRACES wrap code blocks.
+
+const lapLength = 5;
+const laps = 23;
+let raceLength = 0; //VARIABLE added
+
+function raceLength(x, y) {
+  return x * y; //NOW, value is being sent as the result of this fxn call, and then putting that inside of the () of the console.log
+}
+
+console.log (raceLength(lapLength, laps));
+
+//CALLBACKS
+//can pass a functio into another function as an argument and have somethinh happen. STANDARD INTERVIEW QUESTION
+
+function greeting(name) {
+  alert('Hello ' + name);
+}
+
+function processUserInput(callback) {
+  var name = prompt('Please enter your name');
+  callback(name);
+}
+
+
 
 let x = 2;
 
