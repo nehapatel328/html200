@@ -1,7 +1,7 @@
 //CONDITIONAL STATEMENTS: TERNARY STATEMENTS; IF/ELSE STATEMENTS
 
-//if/else Statements: have an if keyword, a boolean expression, and a block of code. if booldea is true, then block executes, if falst, block is skipped. alternative block if expression is false via an ELSE BLOCK.
-
+//if/else Statements: have an if keyword, a boolean expression, and a block of code. if boolean is true, then block executes, if false, block is skipped. alternative block if expression is false via an ELSE BLOCK.
+//example: Choosing a restaurant, depending on if a coin flip produces heads or tails---If we need to have two restaurants and we’re trying to decide which one to go to, we’ll need to check the coin value and go to the first restaurant if heads, else the second restaurant.
 
 
 const hairLengthInInches = 10;
@@ -18,7 +18,7 @@ if (hairLengthInches < 2){
 function makeDogRollOver(dog){
   if(!dog) {
     console.log('You need to bring your dog first');
-    return; //this render the else clauses unecessary
+    return; //this renders the else clauses unecessary
   } else {
     console.log('trainer: hello, you asked ' + dog + ', roll over!');
     console.log('trainer: Hey '+ dog + ', roll over!');
@@ -36,7 +36,7 @@ const dogAgeInHumanyear = 1;
 let puppy;
 
 if (dogAgeInHumanYears <= 2) {
-  puppy= true;
+  puppy = true;
 } else {
   puppy = false;
 }
@@ -69,14 +69,18 @@ function getSheddingAmount(breed {
 
 console.log (
   getSheddingAmount(myDogBreed)
-); //white this works, it would be tedious to add more statements, like 10 or 20. SOO A SWTICH STATEMENT IS USED INSTEAD
+); //while this works, it would be tedious to add more statements, like 10 or 20. SOO A SWTICH STATEMENT IS USED INSTEAD
 
 //SWITCH STATEMENTS
 //has a switch keyword and then a value in (); the value in () is then compared to one or more cases defined in the block of the switch statement. each case is defined by usng case keyword, followed by the value that we wanne compare agaisnt. each case blcok run a set of statements and end with the BREAK keyword in order to end the block. if none of cases match, we can run a default case.
 
+//example:  Displaying a translated message on the screen based on the language you select? Let's say there are 10 language choices.​--Switch statements are best for situations that compare one variable to many values. While if/else statements could be used, it’s more concise and readable to use a switch statement.
+
+
+
 const myDogBreed = 'labradoodle';
 
-function getSheddingAmount(breed {
+function getSheddingAmount(breed) {
   switch (breed) {
     case 'beagle': // fall through case. will run with golden retriever. use break if you wanna run separate
     case 'golden retriever': {
@@ -135,17 +139,20 @@ const dog = {
   name: 'Fido'
 };//key is name; and the valude is 'Fido' (the string/primitive). So now our object has one value that can be obtained by referencing it by key. To access this value, we can use two diff methods: DOT NOTATION that's the most common;OR BRACKET NOTATION
 
+//Object properties are accessed via dot notation or bracket notation via a string/variable.
+
+
 const dog = {
   name: 'Fido'
 };
-console.log(dog.name); //DOT notation inside (). It's the variable name followed by dot and then the key name in order to obtain the value.
+console.log(dog.name); //DOT notation inside (). It's the variable name followed by dot and then the key name in order to obtain the value. dog[breed] is not correct because breed is never defined with the string ‘breed’.
 
 //SECOND is BRACKET NOTATION
 //more useful if we're accessing the key using a variable
 const dog = {
   name: 'Fido'
 };
-console.log(dog['name']); //string name into the bracket
+console.log(dog['name']); //string name into the bracket, dog[name] is not correct because name is never defined with the string 'name'.
 //Fido
 
 //NOW let's store key into a variable
@@ -195,4 +202,32 @@ const dog = {
 
 dog.speak();
 
-//objects are essential building blocks of javascript programs. They provide a container to not only organize but also encapsualate data into independent, modular unit. Whenever you start working with pieces of data that are tightly related to one another, think about putting that data into an object. 
+//objects are essential building blocks of javascript programs. They provide a container to not only organize but also encapsualate data into independent, modular unit. Whenever you start working with pieces of data that are tightly related to one another, think about putting that data into an object.
+
+//run a program over and over while something is false. The best way to do this is to use a while loop. A while loops is
+
+let input = false;
+while (true) { //while a condition is true, run this code
+  //code that's gonna run over and over while true
+}
+
+let quite = false; //variable quite because we want user to be able to quite the program
+let balance = 1000;
+
+while (input === false) {
+
+  let input = prompt ('Enter your command'); //this will check for our input and if it's some value, then do some coding
+
+  if (input === 'quit') {
+    //type in quit to end the program to stop that while loop. so everything depends on what you enter
+
+    quit = true; //only quits when variable false above is true
+  } else if (input === "W") //withdrawal...but we need to keep trakc of balance, so put it up under let quit so you can access balance (outside of loop) so so the loop doesn't reset everytime. It'll go through flow control and the balance will be adjusted.
+  //code
+
+  quit = true; //user needs to flip switch
+
+  }
+}
+
+console.log('Program End') //proof of program quiting
