@@ -1,34 +1,57 @@
-let input = false;
-let balance = 0;
+let balance = 1000;
+let quite = false;
 
-while (input = true) {
-  let quite = true; //variable quite because we want user to be able to quite the program
-  const input = prompt ('What would you like to do? W (Withdraw), D (Deposit), B (View Balance)');
+while (quit === false) {
+  let input = prompt ('What would you like to do? W (Withdraw), D (Deposit), B (View Balance), quit');
     switch () {
-      case 'W': {
-        return 'Withdraw';
+      case 'B': {
+        case input = 'B':
+        let B = balance.toFixed;
+        alert('Your balance is $' + balance.toFixed(2));
+        if(newBalance <= 0){
+          alert("Sorry, you have insufficient funds.")
+        }//close if statement
         break;
+      } //close "B"
+
+      case 'W': {
+          case input = 'W':
+          let W = prompt ('How much will be withdrawing today?');
+          newBalance = balance.toFixed + Number(W);
+          return.alert('You are withdrawing $' - balance.toFixed(2));
+          if(newBalance <= 0){
+            alert("Sorry, you have insufficient funds.")
+          }//close if statement
+          break;
       } //close case 'W'
 
       case 'D': {
-        return 'Deposit';
+        case input = 'D':
+        let D = prompt('How much will you be despositing today?');
+        newBalance = balance.toFixed + Number(D);
+        alert('Your balance is + balance.toFixed')
+        if(newBalance <= 0){
+          alert("Sorry, you have insufficient funds.")
+        }//close if statement
         break;
       } //close 'D'
 
-      case 'B': {
-        return 'View Balance';
+      case 'Q': {
+        case input = 'Q';
+        alert('You are logged out');
         break;
       } //close "B"
 
       case undefined:
-        quit = true;
+        alert('Sorry, please try again');
         break;
 
       default: { //will run if there's no match
-        return 'Sorry, not found';
+        alert('Sorry, not found');
       } //close default
     } //close switch
-    if (input === 'quit') {
+
+    if (input === 'Q') {
       quit = true;
     } // close if statement
   }  // close prompt
