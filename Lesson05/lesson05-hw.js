@@ -9,7 +9,6 @@ while (quit === false) {
     }
 
     else if (input === 'B') {
-      balance = result;
       alert('Your current balance is $' + Number(balance));
 
       if (balance <= 0){
@@ -19,20 +18,20 @@ while (quit === false) {
 
     else if (input === 'W') {
       let withdrawAmount = prompt('How much will you be withdrawing today?');
-      result = Number(balance) - Number(withdrawAmount);
-      alert('Your current balance is $' + Number(result));
+      balance -= Number(withdrawAmount);
+      alert('Your current balance is $' + Number(balance));
 
-      if (result <= 0){
+      if (balance <= 0){
         alert('Sorry, you have insufficient funds.')
       }//close if statement
     } //close else if
 
     else if (input === 'D') {
       let depositAmount = prompt('How much will you be despositing today?');
-      result = Number(balance) + Number(depositAmount);
-      alert('Your current balance is $' + Number(result))
+      balance += Number(depositAmount);
+      alert('Your current balance is $' + Number(balance))
 
-      if (result <= 0){
+      if (balance <= 0){
       alert('Sorry, you have insufficient funds.')
       }//close if statement
     }// close else if
