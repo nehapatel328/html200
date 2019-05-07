@@ -9,7 +9,8 @@ while (quit === false) {
     }
 
     else if (input === 'B') {
-      alert('Your balance is $' + Number(balance));
+      balance = result;
+      alert('Your current balance is $' + Number(balance));
 
       if (balance <= 0){
         alert('Sorry, you have insufficient funds.')
