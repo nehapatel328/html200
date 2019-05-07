@@ -204,7 +204,7 @@ dog.speak();
 
 //objects are essential building blocks of javascript programs. They provide a container to not only organize but also encapsualate data into independent, modular unit. Whenever you start working with pieces of data that are tightly related to one another, think about putting that data into an object.
 
-//run a program over and over while something is false. The best way to do this is to use a while loop. A while loops is
+//run a program over and over WHILE something is false. The best way to do this is to use a while loop. A while loops is
 
 let input = false;
 while (true) { //while a condition is true, run this code

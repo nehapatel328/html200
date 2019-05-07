@@ -1,7 +1,7 @@
-let balance = 1000;
-let quite = false;
+/*let balance = 1000;
+let Q = false;
 
-while (quit === false) {
+while (input === false) {
   let input = prompt ('What would you like to do? W (Withdraw), D (Deposit), B (View Balance), quit');
     switch () {
       case 'B': {
@@ -52,9 +52,52 @@ while (quit === false) {
     } //close switch
 
     if (input === 'Q') {
-      quit = true;
+      Q = true;
     } // close if statement
   }  // close prompt
+} //close while loop
+*/
+
+
+let quite = false; //variable quite because we want user to be able to quite the program
+let balance = 1000;
+
+while (quit === false) {
+  let input = prompt ('What would you like to do? W (Withdraw), D (Deposit), B (View Balance), Q (Quit)');
+
+  if (input === 'Q') {
+    quit = true;
+  } //close if statement
+
+  else if (input === 'W') {
+    let withdrawAmount = prompt('How much will be withdrawing today?');
+    result = balance.toFixed - Number(withdrawAmount);
+    alert('You are withdrawing $' - balance.toFixed(2));
+
+    if(result <= 0){
+      alert("Sorry, you have insufficient funds.")
+    }//close if statement
+  }
+
+  else if (input === 'D') {
+    let depositAmount = prompt('How much will you be despositing today?');
+    result = balance.toFixed + Number(depositAmount);
+    alert('Your balance is $' + balance.toFixed(2))
+    if(result <= 0){
+      alert("Sorry, you have insufficient funds.")
+    }//close if statement
+
+  else if (input === 'B') {
+    let balance = balance.toFixed;
+    alert('Your balance is $' + balance.toFixed(2));
+
+    if(balance <= 0){
+      alert("Sorry, you have insufficient funds.")
+    }//close if statement
+
+  else if (input = undefined) {
+    alert('Sorry, please try again');
+  }//close if statement
 } //close while loop
 
 
