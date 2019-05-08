@@ -1,12 +1,12 @@
 let brunchFood = ['mimosa', 'avocado toast', 'eggs benedict', 'gluten free waffles', 'Bloody Mary'];
-console.log(arr[2]);
+console.log(brunchFood[2]);
 
 console.log(arr);
 
 brunchFood.push ('strawberry pancakes');
 console.log(brunchFood);
 
-brunchFood.splice(3, 1);
+brunchFood.splice(2, 1);
 console.log(brunchFood);
 
 let str= brunchFood.join(',');
